@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* body{
-    background-image: url(https://i.pinimg.com/1200x/0f/c4/fb/0fc4fbc7f0c1d2a3e3288683ba7b1ddb.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
+body{
+   background: linear-gradient(to right bottom,pink, rgb(188, 224, 188), rgb(237, 165, 165), rgb(232, 232, 143), rgb(241, 234, 234));
+}

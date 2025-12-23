@@ -19,7 +19,7 @@ const App = () => {
     properties: ["Classic", "Gluten free", "Smooth"],
     description: "Rich vanilla flavor",
     properties2: ["Choco chips", "Caramel", "Cashews"],
-    price: "$10.00",
+    price: "$20.00",
     delivery: "+$2 delivery"
   },
   {
@@ -28,16 +28,16 @@ const App = () => {
     properties: ["Rich cocoa", "Premium", "Vegetarian"],
     description: "Deep chocolate taste",
     properties2: ["Dark chocolate", "Brownie bits", "Walnuts"],
-    price: "$10.00",
+    price: "$15.00",
     delivery: "+$2 delivery"
   },
   {
-    img: "https://i.pinimg.com/736x/0e/fe/e6/0efee68ee2d809bc505e6980d26b5272.jpg",
+    img: "https://i.pinimg.com/736x/84/6c/16/846c16f31decfedef0f96bf3c9a61dbf.jpg",
     name: "Mango Magic",
     properties: ["Seasonal", "Fruit based", "Refreshing"],
     description: "Real mango pulp",
     properties2: ["Mango chunks", "White chocolate", "Pistachio"],
-    price: "$10.00",
+    price: "$50.00",
     delivery: "+$2 delivery"
   },
   {
@@ -46,7 +46,7 @@ const App = () => {
     properties: ["Nutty", "Premium", "Creamy"],
     description: "Roasted pistachio blend",
     properties2: ["Pistachio nuts", "Honey", "Choco flakes"],
-    price: "$10.00",
+    price: "$5.00",
     delivery: "+$2 delivery"
   },
   {
@@ -55,7 +55,7 @@ const App = () => {
     properties: ["Berry rich", "Antioxidant", "Light"],
     description: "Sweet blueberry swirl",
     properties2: ["Blueberry", "Almonds", "Sugar pearls"],
-    price: "$10.00",
+    price: "$40.00",
     delivery: "+$2 delivery"
   },
   {
@@ -64,7 +64,7 @@ const App = () => {
     properties: ["Caramelized", "Crunchy", "Popular"],
     description: "Classic butterscotch crunch",
     properties2: ["Butterscotch", "Caramel sauce", "Peanuts"],
-    price: "$10.00",
+    price: "$30.00",
     delivery: "+$2 delivery"
   },
   {
@@ -82,7 +82,7 @@ const App = () => {
     properties: ["Strong coffee", "Energy boost", "Aromatic"],
     description: "Bold coffee notes",
     properties2: ["Coffee beans", "Choco crunch", "Hazelnuts"],
-    price: "$10.00",
+    price: "$20.00",
     delivery: "+$2 delivery"
   },
   {
@@ -91,9 +91,27 @@ const App = () => {
     properties: ["Mixed berries", "Fruity", "Colorful"],
     description: "Berry fusion scoop",
     properties2: ["Strawberry", "Blueberry", "Raspberry"],
-    price: "$10.00",
+    price: "$40.00",
     delivery: "+$2 delivery"
-  }
+  },
+  {
+  img: "https://i.pinimg.com/736x/ad/f7/9b/adf79bddfa7def6bd73dc3188d3be687.jpg",
+  name: "Tropical Twist",
+  properties: ["Tropical fruits", "Refreshing", "Exotic"],
+  description: "Island fruit fusion",
+  properties2: ["Mango", "Pineapple", "Coconut"],
+  price: "$35.00",
+  delivery: "+$2 delivery"
+},
+{
+  img: "https://i.pinimg.com/1200x/7f/da/3a/7fda3ad971bb5f46df7a96dd3638357d.jpg",
+  name: "Choco Berry Crunch",
+  properties: ["Chocolate blend", "Sweet", "Crunchy"],
+  description: "Berry chocolate delight",
+  properties2: ["Dark chocolate", "Strawberry", "Almond bits"],
+  price: "$15.00",
+  delivery: "+$2 delivery"
+}
 ];
 
 

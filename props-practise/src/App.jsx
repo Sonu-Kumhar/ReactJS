@@ -3,14 +3,105 @@ import Card from './components/Card'
 
 const App = () => {
 
-  const heroes=["ShadowStrike","IronFalcon","NightBlaze","ThunderClaw","NovaKnight","PhantomX","SolarFury","DarkSpecter","StormRider","CrimsonVigil"];
+  const iceCreams = [
+  {
+    img: "https://i.pinimg.com/736x/a2/64/89/a26489963b8e1c1b5bed392563a8c8c1.jpg",
+    name: "Strawberry Bliss",
+    properties: ["Vegan", "Organic", "Low fat"],
+    description: "Fresh strawberry cream",
+    properties2: ["Strawberry", "Almond flakes", "Honey drizzle"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  },
+  {
+    img: "https://i.pinimg.com/736x/d7/8b/16/d78b16ba1fdfa0d55f718aa29d8637a0.jpg",
+    name: "Vanilla Dream",
+    properties: ["Classic", "Gluten free", "Smooth"],
+    description: "Rich vanilla flavor",
+    properties2: ["Choco chips", "Caramel", "Cashews"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  },
+  {
+    img: "https://i.pinimg.com/1200x/0b/3f/59/0b3f5986b1f83c67992b36084b0b87d7.jpg",
+    name: "Chocolate Heaven",
+    properties: ["Rich cocoa", "Premium", "Vegetarian"],
+    description: "Deep chocolate taste",
+    properties2: ["Dark chocolate", "Brownie bits", "Walnuts"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  },
+  {
+    img: "https://i.pinimg.com/736x/0e/fe/e6/0efee68ee2d809bc505e6980d26b5272.jpg",
+    name: "Mango Magic",
+    properties: ["Seasonal", "Fruit based", "Refreshing"],
+    description: "Real mango pulp",
+    properties2: ["Mango chunks", "White chocolate", "Pistachio"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  },
+  {
+    img: "https://i.pinimg.com/1200x/ed/b3/05/edb305358f33916104e541b76d8ff7ee.jpg",
+    name: "Pistachio Treat",
+    properties: ["Nutty", "Premium", "Creamy"],
+    description: "Roasted pistachio blend",
+    properties2: ["Pistachio nuts", "Honey", "Choco flakes"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  },
+  {
+    img: "https://i.pinimg.com/1200x/bd/76/54/bd76543030db11c3f7c7bbd85f5d0270.jpg",
+    name: "Blueberry Swirl",
+    properties: ["Berry rich", "Antioxidant", "Light"],
+    description: "Sweet blueberry swirl",
+    properties2: ["Blueberry", "Almonds", "Sugar pearls"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  },
+  {
+    img: "https://i.pinimg.com/736x/df/16/69/df1669a77551384e8d21d980af6f8fbd.jpg",
+    name: "Butterscotch Joy",
+    properties: ["Caramelized", "Crunchy", "Popular"],
+    description: "Classic butterscotch crunch",
+    properties2: ["Butterscotch", "Caramel sauce", "Peanuts"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  },
+  {
+    img: "https://i.pinimg.com/736x/55/3b/67/553b6716a44c3ed8425566d36ae5f3b1.jpg",
+    name: "Mint Choco",
+    properties: ["Refreshing", "Cooling", "Bold"],
+    description: "Minty chocolate blend",
+    properties2: ["Mint flakes", "Dark choco", "Cookie crumbs"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  },
+  {
+    img: "https://i.pinimg.com/736x/26/f3/7a/26f37a0bc23957846dd43118c48de8f3.jpg",
+    name: "Coffee Crunch",
+    properties: ["Strong coffee", "Energy boost", "Aromatic"],
+    description: "Bold coffee notes",
+    properties2: ["Coffee beans", "Choco crunch", "Hazelnuts"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  },
+  {
+    img: "https://i.pinimg.com/736x/7d/95/33/7d953352dba1c3dd061c4932565733ad.jpg",
+    name: "Berry Mix",
+    properties: ["Mixed berries", "Fruity", "Colorful"],
+    description: "Berry fusion scoop",
+    properties2: ["Strawberry", "Blueberry", "Raspberry"],
+    price: "$10.00",
+    delivery: "+$2 delivery"
+  }
+];
 
 
   return (
-    <div className='w-screen h-screen bg-[#262626] flex flex-wrap p-4 gap-5 text-white'>
-      {heroes.map((elem)=>{
-        return <Card user={elem} />
-      })}
+    <div className='p-4 flex gap-4 flex-wrap'>
+      {iceCreams.map((elem)=>{
+        return <Card image={elem.img} name={elem.name} properties={elem.properties} description={elem.description} properties2={elem.properties2} price={elem.price} delivery={elem.delivery}/>
+      })}  
     </div>
   )
 }

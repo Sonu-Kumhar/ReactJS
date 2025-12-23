@@ -6,7 +6,7 @@ Clean layout, smooth background, and reusable card components.
 ## 🍨 UI Preview
 
 <p align="center">
-  <img src="./public/preview.png" width="500" />
+  <img src="./public/preview.png" width="1000" />
 </p>
 
 ## ✨ Features

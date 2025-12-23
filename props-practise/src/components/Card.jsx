@@ -4,7 +4,7 @@ const Card = (props) => {
     console.log(props)
     return (
         <div>
-            <div
+            <div 
                 className="card w-[280px] h-[380px] rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300"
                 style={{ backgroundColor: props.colors[0] }}
             >

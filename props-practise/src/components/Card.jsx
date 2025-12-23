@@ -5,11 +5,11 @@ const Card = (props) => {
     return (
         <div>
             <div
-                className="w-[280px] h-[380px] rounded-3xl overflow-hidden"
+                className="card w-[280px] h-[380px] rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300"
                 style={{ backgroundColor: props.colors[0] }}
             >
                 <div className='image overflow-hidden h-[50%]'>
-                    <img className='w-full h-full object-cover ' src={props.image} alt="" />
+                    <img className='w-full h-full object-cover' src={props.image} alt="" />
                 </div>
                 <div className='info flex flex-col h-[50%] px-4'>
                     <h2 className='text-2xl text-[#343434] font-bold'>{props.name}</h2>

@@ -3,6 +3,12 @@
 A modern, minimal ice-cream card UI built with **React** and **Tailwind CSS**.  
 Clean layout, smooth background, and reusable card components.
 
+## 🍨 UI Preview
+
+<p align="center">
+  <img src="./public/preview.png" width="500" />
+</p>
+
 ## ✨ Features
 - Responsive card design
 - Dynamic data using array of objects

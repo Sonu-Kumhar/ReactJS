@@ -1,34 +1,43 @@
-import React, { useState } from 'react'
+  import React from 'react'
+  import { useState } from 'react';
 
-const App = () => {
+  const App = () => {
 
-  const [num, setNum] = useState(0);
+    const initialArray = [15, 20, 25, 14, 36]
+    let [arr, setArr] = useState(initialArray);
 
-  return (
-    <div className='w-screen h-screen flex items-center justify-center gap-10'>
-      <button
-        onClick={() => {
-          setNum(num - 1);
-        }}
-        className='text-5xl border-8 font-bold p-8 text-red-500 rounded-2xl active:scale-95'>
-        Come behind
-      </button>
+    let increaseOne = () =>{
+      let newArr = arr.map((elem)=>{
+          return elem+1;
+      })
+      setArr(newArr);
+    }
 
-      <h1 className='text-9xl'>{num}</h1>
+    let removeLast = () =>{
+      setArr(arr = arr.slice(0,-1));
+      console.log(arr);
+    }
 
-      <button
-        onClick={() => {
-          setNum(num + 1);
-        }}
-        className='text-5xl text-emerald-600 p-8  font-bold border-8 rounded-2xl active:scale-95'>
-        Go ahead
-      </button>
-      
-    </div>
-  )
-}
+    return (
+      <div className='w-screen h-screen bg-[#1e1e1e] text-white text-4xl p-8 flex flex-col items-center justify-center gap-5'>
 
-// useState is a built-in React Hook that allows functional components to manage local component state.
-// It provides a way to store, update, and trigger re-rendering based on state changes.
+         <div className='flex gap-5'>
+           {
+            arr.map((elem, index) => {
+              return <h1 key={index}> <span>{elem}</span></h1>
+            })
+          }
+         </div>
+        
+        <button onClick={increaseOne} className='text-4xl border-2 bg-emerald-500 font-bold px-4 py-2 active:scale-90'>+1</button>
+        
+        <button onClick={removeLast} className='text-4xl border-2 bg-red-500 font-bold px-4 py-2 active:scale-95'>Remove last element</button>
 
-export default App
+        <button onClick={()=>{
+            setArr(initialArray);
+        }} className='text-4xl border-2 bg-blue-500 font-bold px-4 py-2 active:scale-95'>Reset</button>
+      </div>
+    )
+  }
+
+  export default App

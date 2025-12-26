@@ -10,7 +10,7 @@ const App = () => {
         onClick={() => {
           setNum(num - 1);
         }}
-        className='text-5xl bg-red-500 p-8 text-white rounded-2xl active:scale-95'>
+        className='text-5xl border-8 font-bold p-8 text-red-500 rounded-2xl active:scale-95'>
         Come behind
       </button>
 
@@ -20,7 +20,7 @@ const App = () => {
         onClick={() => {
           setNum(num + 1);
         }}
-        className='text-5xl bg-emerald-600 p-8 text-white rounded-2xl active:scale-95'>
+        className='text-5xl text-emerald-600 p-8  font-bold border-8 rounded-2xl active:scale-95'>
         Go ahead
       </button>
       

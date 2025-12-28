@@ -11,6 +11,7 @@ const App = () => {
     e.preventDefault();
     // console.log("form submitted")
     setAllPokemon([...allPokemon, {pokemon, email}])
+    console.log(allPokemon);
     // console.log(allPokemon)
     setPokemon("")
     setEmail("")

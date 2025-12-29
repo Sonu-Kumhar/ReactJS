@@ -3,15 +3,26 @@ import { useState } from 'react'
 
 const App = () => {
   const [task, setTask] = useState("")
-  const [allTask, setAllTask] = useState([])
+  const [allTask, setAllTask] = useState([]);
+  const [editIdx, setEditIdx] = useState(null)
 
   let submitHandler = (e) => {
+
     e.preventDefault();
     // console.log("form submitted");
-    let newAllTask = [...allTask, task];
-    setAllTask(newAllTask);
-    // console.log(allTask)
-    setTask("")
+    if (editIdx !== null) {
+      let newAllTask = [...allTask];
+      newAllTask[editIdx] = task;
+      setAllTask(newAllTask);
+      setTask("")
+      setEditIdx(null)
+    }
+    else {
+      let newAllTask = [...allTask, task];
+      setAllTask(newAllTask);
+      // console.log(allTask)
+      setTask("")
+    }
   }
 
   let deleteTask = (idx) => {
@@ -23,9 +34,11 @@ const App = () => {
   }
 
   let editTask = (idx) => {
-      console.log("editing the element with index: ", idx);
-      setTask(allTask[idx]);
-      deleteTask(idx);
+    setEditIdx(idx);
+    console.log("editing the element with index: ", idx);
+    setTask(allTask[idx]); //on clicking edit button the task should come in input box
+    
+    // console.log(allTask[idx])
   }
 
   return (
@@ -44,7 +57,9 @@ const App = () => {
           }}
         />
 
-        <button className='bg-blue-500 px-4 py-2 cursor-pointer text-2xl font-semibold rounded-xl mx-4 active:scale-95'>Add</button>
+        <button className='bg-blue-500 px-4 py-2 cursor-pointer text-2xl font-semibold rounded-xl mx-4 active:scale-95'>
+          {editIdx !== null ? "Update" : "Add"}
+        </button>
       </form>
 
       {

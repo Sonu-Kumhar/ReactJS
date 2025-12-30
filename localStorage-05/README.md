@@ -3,7 +3,9 @@
 A simple React app to add, edit, and delete quotes with a  
 liquid glass (glassmorphism) UI. Data is stored using localStorage.
 
-![Preview](./preview.png)
+<p align="center">
+  <img src="/preview.png" alt="App Preview" />
+</p>
 
 ## Features
 - Add / Edit / Delete quotes

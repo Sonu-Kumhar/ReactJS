@@ -24,16 +24,20 @@ const App = () => {
       let pokemonData2 = await axios.get(elem.url); //uss har url pe request kar rhe hai wha se jo data aayega usme actual images ke url hai
       // console.log(pokemonData2.data.sprites.front_default);
       return pokemonData2.data.sprites.front_default;
-    }).forEach((elem, index)=>{
+    })
+    let temp = [...newAllPokemon];
+
+    urlArray.forEach((elem, index)=>{ //spread operator se array copy hua hai but uske andar ke objects ka reference same hi hai isliye fir se aisa krna padega temp me copy karke har uss temp ke index pe object destructuring karke url update kar rhe hai
       elem.then((res)=>{
-        newAllPokemon[index].url = res;
+        temp[index] = {...temp[index], url:res}
         // console.log(newAllPokemon[index].url);
         // console.log(res);
+        setAllPokemon([...temp])
       })
     })
-    console.log(newAllPokemon)
-    console.log(allPokemon)
-    setAllPokemon(newAllPokemon)
+    // console.log(newAllPokemon)
+    // console.log(allPokemon)
+    
     
   }
 

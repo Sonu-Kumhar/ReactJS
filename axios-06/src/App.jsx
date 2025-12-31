@@ -1,42 +1,58 @@
-import React, { useState } from 'react'
+import React from 'react'
 import axios from "axios"
+import { useState } from 'react'
 import Card from './components/Card'
 
 const App = () => {
 
-  const [allData, setAllData] = useState([])
+  const [allPokemon, setAllPokemon] = useState([])
 
-  let getData = async () => {
-    let response = await axios.get("https://picsum.photos/v2/list?page=2&limit=50")
-    let newAllData = [...allData, ...response.data];
-    setAllData(newAllData)
-    console.log(response.data)
+  let getPokemon = async () => {
+    let pokemonData = await axios.get("https://pokeapi.co/api/v2/pokemon")
+    let newAllPokemon = [...allPokemon, ...pokemonData.data.results]
+
+    // console.log(newAllPokemon.map((elem, index)=>{
+    //   console.log(elem.name, elem.url)
+    // }))
+
+    // setAllPokemon(newAllPokemon)
+    // console.log(pokemonData.data.results)
+    let pokemonArray = pokemonData.data.results; //the url doesn't contains images, it contains another large data in json format
+
+    let urlArray = pokemonArray.map( async (elem, index)=>{
+      // console.log(elem.url)
+      let pokemonData2 = await axios.get(elem.url); //uss har url pe request kar rhe hai wha se jo data aayega usme actual images ke url hai
+      // console.log(pokemonData2.data.sprites.front_default);
+      return pokemonData2.data.sprites.front_default;
+    }).forEach((elem, index)=>{
+      elem.then((res)=>{
+        newAllPokemon[index].url = res;
+        // console.log(newAllPokemon[index].url);
+        // console.log(res);
+      })
+    })
+    console.log(newAllPokemon)
+    console.log(allPokemon)
+    setAllPokemon(newAllPokemon)
+    
   }
 
   return (
-    <div className='w-screen h-screen text-white text-2xl p-6'>
-      <button onClick={getData} className='text-3xl font-semibold border-4 border-[#ffffff] text-[#f1f1f1] bg-[#00b04c] px-4 py-2 rounded-xl mb-4 active:scale-95'>Get Data</button>
-    
-      <div className='w-full flex gap-4 flex-wrap'>
+    <div className='w-fit h-screen p-4'>
+      <button onClick={getPokemon} className='text-4xl text-[#323232] font-semibold bg-[yellow] border-2 border-[#2a2a2a] px-4 py-2 rounded-xl active:scale-95 cursor-pointer mb-4'>Pokemon</button>
+
+      <div className='flex w-full flex-wrap gap-4'>
         {
-          allData.map((elem, index)=>{
+          allPokemon.map((elem, index)=>{
             return <div key={index}>
-              {/* <h1>{elem.author}, {elem.url}</h1> */}
-              <Card  name = {elem.author} url={elem.download_url}/>
+              <Card name={elem.name} url={elem.url}/>
             </div>
           })
         }
-      
-        {/* <Card/> */}
       </div>
+      
     </div>
   )
 }
-
-// Axios is a JavaScript library used to make HTTP requests (GET, POST, PUT, DELETE) from:
-// Browser
-// Node.js
-
-// It is mainly used to connect frontend ↔ backend APIs.
 
 export default App

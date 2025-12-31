@@ -3,7 +3,8 @@
 A simple React app that fetches images using **Axios** and displays them as cards.
 
 <p align="center">
-  <img src="./public/preview.png" width="1000" />
+  <img src="./public/preview1.png" width="1000" />
+  <img src="./public/preview2.png" width="1000" />
 </p>
 
 ## Features

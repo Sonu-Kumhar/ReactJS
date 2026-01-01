@@ -4,7 +4,7 @@ const Card = ({ name, affiliation, gender, race, ki, image }) => {
     let cardUrl = ["https://i.pinimg.com/736x/18/47/69/18476926ea4f05176521d48ef7dd95ad.jpg",
         "https://i.pinimg.com/736x/d6/7e/7f/d67e7f219701eb3c3ec729cd28935fa2.jpg",
         "https://i.pinimg.com/736x/2a/8d/d4/2a8dd41fd6dd0717627c3da7e04ea3d6.jpg",
-        "https://i.pinimg.com/736x/6b/7a/8a/6b7a8a3a93c230a169f09af244c6d25f.jpg"
+        "https://i.pinimg.com/736x/6b/7a/8a/6b7a8a3a93c230a169f09af244c6d25f.jpg",
     ]
     let randomNum = Math.floor(Math.random()*4);
     return (

@@ -1,43 +1,57 @@
-import React, { useCallback, useEffect } from 'react'
+import React from 'react'
+import axios from "axios"
+import Card from './components/Card'
 import { useState } from 'react'
 
 const App = () => {
-  const [counter, setCounter] = useState(0)
 
-  useEffect(()=>{
-    console.log("useEffect is running")
-  },[counter])    
+  const [allDragons, setAllDragons] = useState([])
+  const [dragonCount, setDragonCount] = useState("")
+  // const [display1, setDisplay1] = useState("block")
+
+  let getDragons = async (e) => {
+    e.preventDefault()
+    setDragonCount(dragonCount);
+    let response = await axios.get(`https://dragonball-api.com/api/characters?limit=${dragonCount}&page=1`)
+    let newAllDragons = [...response.data.items];
+    setAllDragons(newAllDragons)
+    setDragonCount("");
+    console.log(dragonCount)
+    setDisplay1("hidden")
+    console.log(response.data.items)
+  }
 
   return (
-    <div className='text-3xl p-10'>
-      <button onClick={()=>{
-        setCounter(counter+1)
-      }} className='text-4xl bg-emerald-500 px-4 py-2 border-2 rounded-xl text-white border-black active:scale-95'>Click</button>
+    <div className='mainContainer w-full h-screen p-6 px-20'>
+      <form onSubmit={getDragons}>
+        <input
+          type="number"
+          min={1}
+          placeholder='Enter Dragons Count'
+          className='bg-[#535353] text-3xl font-normal text-[#ffffff] border-4 border-[#d1d1d1] px-4 py-2 mr-5'
+          value={dragonCount}
+          required
+          onChange={(e) => {
+            setDragonCount(e.target.value)
+          }}
+        />
+
+        <button className='bg-[#535353] text-3xl font-normal text-[#f1f1f1] border-4 border-[#d1d1d1] px-4 py-2 active:scale-95 mb-10'>Launch Dragons</button>
+      </form>
+
+      <div className='w-full flex gap-15 flex-wrap'>
+        
+        {
+          allDragons.map((elem, index) => {
+            return <div key={index}>
+              <Card name={elem.name} affiliation={elem.affiliation} gender={elem.gender} race={elem.race} ki={elem.ki} image={elem.image} />
+            </div>
+          })
+        }
+
+      </div>
     </div>
   )
 }
-
-// Render = WHAT to show
-// Effect = WHAT to do after showing
-
-// useEffect(() => {              first argument -> fxn, 2nd argument -> dependency array (if not used then useEffect will run on every render)
-//   // side-effect code
-// }, [])
-
-
-// React UI render karta hai
-// Aur jab render ke baad state / props change hote hain,
-// aur us change ke response mein koi side ka kaam karna ho,
-// to hum useEffect use karte hain
-
-// side ways kaam ka mtlb : 
-// API call 
-// title change
-// console log
-// timer 
-// localStorage
-
-// Render = UI banane ka kaam
-// useEffect = UI ke baad hone wale kaam
 
 export default App

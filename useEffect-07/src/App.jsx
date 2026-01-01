@@ -40,10 +40,10 @@ const App = () => {
       </form>
 
       <div className='w-full flex gap-15 flex-wrap'>
-        <marque></marque>
-        <img className={`${display1} absolute top-0 h-120 animate-marquee`} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" />
-        <img className={`${display1} absolute top-40 left-140 rotate-y-180 h-100 animate-marquee`} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" />
-        <img className={`${display1} absolute top-80 animate-marquee`} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" />
+        <img className={`${display1} invert absolute top-30 h-80 animate-marquee`} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" />
+        <img className={`${display1} grayscale absolute top-80 h-120 animate-marquee `} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" />
+        <img className={`${display1} absolute top-40 left-140 h-100 rotate-90 animate-marquee-opposite`} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" />
+        {/* <img className={`${display1} absolute top-80 animate-marquee`} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" /> */}
 
         
         {

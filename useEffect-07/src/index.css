@@ -32,9 +32,14 @@ body{
     font-family: dragon;
 }
 
-.card:hover{
-    transform: rotateX('45');
+.card:hover .card-frame{
+    transform: rotateX(15deg);
 }
+
+.card:hover .image{
+    transform: scale(1.2);
+}
+
 
 button,input{
     background: radial-gradient(rgb(125, 125, 125) 30%, black );

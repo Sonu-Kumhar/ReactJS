@@ -32,8 +32,11 @@ body{
     font-family: dragon;
 }
 
-button{
-    
+.card:hover{
+    transform: rotateX('45');
+}
+
+button,input{
     background: radial-gradient(rgb(125, 125, 125) 30%, black );
 }
 

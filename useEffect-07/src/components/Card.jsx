@@ -1,11 +1,16 @@
 import React from 'react'
 
 const Card = ({name, affiliation, gender, race, ki, image}) => {
+    let cardUrl = ["https://i.pinimg.com/736x/18/47/69/18476926ea4f05176521d48ef7dd95ad.jpg", 
+        "https://i.pinimg.com/736x/d6/7e/7f/d67e7f219701eb3c3ec729cd28935fa2.jpg",
+        "https://i.pinimg.com/736x/2a/8d/d4/2a8dd41fd6dd0717627c3da7e04ea3d6.jpg",
+        "https://i.pinimg.com/736x/6b/7a/8a/6b7a8a3a93c230a169f09af244c6d25f.jpg"
+    ]
     return (
         <div className='card w-70 h-105 rounded-lg'>
             
-           <div className='relative w-full h-full '>
-            <img className='object-cover relative ' src="https://i.pinimg.com/736x/d6/7e/7f/d67e7f219701eb3c3ec729cd28935fa2.jpg" alt="" />
+           <div className='relative w-full h-full  perspective-[1000px]'>
+            <img className='object-cover relative dragon-img' src="https://i.pinimg.com/736x/d6/7e/7f/d67e7f219701eb3c3ec729cd28935fa2.jpg" alt="" />
 
             <div className='w-28'>
                 <img className='h-80 w-45 absolute top-20 left-28 object-contain object-center hover:scale-125 transition-all duration-[500ms]' src={image} alt="" />

@@ -7,7 +7,7 @@ const App = () => {
 
   const [allDragons, setAllDragons] = useState([])
   const [dragonCount, setDragonCount] = useState("")
-  // const [display1, setDisplay1] = useState("block")
+  const [display1, setDisplay1] = useState("block")
 
   let getDragons = async (e) => {
     e.preventDefault()
@@ -40,6 +40,11 @@ const App = () => {
       </form>
 
       <div className='w-full flex gap-15 flex-wrap'>
+        <marque></marque>
+        <img className={`${display1} absolute top-0 h-120 animate-marquee`} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" />
+        <img className={`${display1} absolute top-40 left-140 rotate-y-180 h-100 animate-marquee`} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" />
+        <img className={`${display1} absolute top-80 animate-marquee`} src="https://i.pinimg.com/originals/f9/2d/eb/f92debea10b3bd06e52ecb96695f56a0.gif" alt="" />
+
         
         {
           allDragons.map((elem, index) => {

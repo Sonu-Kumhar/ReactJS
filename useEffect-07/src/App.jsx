@@ -10,7 +10,7 @@ const App = () => {
   const [display1, setDisplay1] = useState("block")
 
   let getDragons = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setDragonCount(dragonCount);
     let response = await axios.get(`https://dragonball-api.com/api/characters?limit=${dragonCount}&page=1`)
     let newAllDragons = [...response.data.items];

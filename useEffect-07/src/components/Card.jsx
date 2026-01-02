@@ -31,6 +31,7 @@ const Card = ({ name, affiliation, gender, race, ki, image }) => {
         <div className='card w-70 h-105 rounded-lg'>
             <div>
                 <img style={{top:`${setCoordinateY}px`, left:`${setCoordinateX}px`}} className={`${displayStars} absolute z-50`} src="https://condaluna.com/assets/stickers/sparkle-trail-1.gif" alt="" />
+                <img style={{top:`${setCoordinateY+20}px`, left:`${setCoordinateX+40}px`}} className={`${displayStars} absolute z-50`} src="https://condaluna.com/assets/stickers/sparkle-trail.gif" alt="" />
             </div>
             <div className=' relative w-full h-full  [perspective:1000px]'>
 

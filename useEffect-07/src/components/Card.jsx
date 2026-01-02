@@ -21,8 +21,8 @@ const Card = ({ name, affiliation, gender, race, ki, image }) => {
         console.log(e)
         console.log(e.clientX, e.clientY);
         setDisplayStars("block")
-        setCoordinateX(e.clientX)
-        setCoordinateY(e.clientY)
+        setCoordinateX(e.clientX-100)
+        setCoordinateY(e.clientY-100)
         console.log("doing something")
     }
 
@@ -30,8 +30,8 @@ const Card = ({ name, affiliation, gender, race, ki, image }) => {
     return (
         <div className='card w-70 h-105 rounded-lg'>
             <div>
-                <img style={{top:`${setCoordinateY}px`, left:`${setCoordinateX}px`}} className={`${displayStars} absolute z-50`} src="https://condaluna.com/assets/stickers/sparkle-trail-1.gif" alt="" />
-                <img style={{top:`${setCoordinateY+20}px`, left:`${setCoordinateX+40}px`}} className={`${displayStars} absolute z-50`} src="https://condaluna.com/assets/stickers/sparkle-trail.gif" alt="" />
+                <img style={{top:`${coordinateY}px`, left:`${coordinateX}px`}} className={`${displayStars} absolute z-50`} src="https://condaluna.com/assets/stickers/sparkle-trail-1.gif" alt="" />
+                <img style={{top:`${coordinateY+20}px`, left:`${coordinateX+40}px`}} className={`${displayStars} absolute z-50`} src="https://condaluna.com/assets/stickers/sparkle-trail.gif" alt="" />
             </div>
             <div className=' relative w-full h-full  [perspective:1000px]'>
 

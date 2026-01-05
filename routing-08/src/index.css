@@ -9,10 +9,10 @@ body{
 
 .active{
     background: linear-gradient(rgb(80, 80, 80), rgb(109, 109, 109));
-    border-radius: 10px;
+    border-radius: 50px;
     
 }
 
 a{
-padding: 4px 12px;
+padding: 4px 14px;
 }

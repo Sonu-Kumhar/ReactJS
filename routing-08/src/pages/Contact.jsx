@@ -12,7 +12,7 @@ const Contact = () => {
     
      <button onClick={()=>{
       navigate("/courses")
-     }} className='text-3xl bg-emerald-500  px-4 py-2 text-white active:scale-95 '>Explore courses</button> 
+     }} className='text-3xl bg-emerald-500  px-4 py-2 text-black active:scale-95'>Explore courses</button> 
     </div>
   )
 }

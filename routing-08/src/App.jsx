@@ -22,4 +22,13 @@ const App = () => {
   )
 }
 
+
+/**
+//Routing in React -> multiple pages, home,about..., BrowserRoute, Link tag
+ 1. Types of routers (BrowserRouter, Hash router, memory router, static router)
+ 2. Link, Navlink, style, 
+ 3. outlet, useNavigate(), queryparams()
+ 4. createBrowserRouter()
+ */
+
 export default App

@@ -1,22 +1,16 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useContext } from 'react'
 import Card from './Components/Card'
+import AllCourses from './Components/AllCourses'
+import { UserContextData } from './context/UserContext'
 
 const App = () => {
-  const [name, setName] = useState("Shradhha")
-  // let changeName = (ChangedName) =>{
-  //   console.log("button clicked")
-  //   console.log("changeName: ", changeName)
-  //   setName(ChangedName);
-  // }
+  const data = useContext(UserContextData)
   return (
-    <div className='w-screen h-screen text-4xl flex  flex-col gap-5 justify-center items-center bg-[#d3d3d3]'>
-      <h1>{name}</h1>
-      <button className='bg-emerald-500 px-4 py-2 active:scale-95 rounded-xl text-white' onClick={()=>{
-        // changeName()
-      }}>Change Name</button>
-      <Card fxn = {setName} />
-      
+    <div className='text-3xl w-screen h-screen bg-red-200'>
+      <h1>App</h1>
+      <h2>{data}</h2>
+      <Card/>
+      <AllCourses/>
     </div>
   )
 }

@@ -1,17 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
 
-const Card = (props) => {
-    console.log(props)
-
-  let arr = ["Kim ji-won, Emily Rudd, Namra, Ironman"];
-  let randomIdx = Math.floor(Math.random()*4);
-
+const Card = () => {
   return (
-    <div>
-      {props.fxn("Hello")}
-      {/* {props.changeName(arr[randomIdx])} */}
-        <h1>Name is changing</h1>
+    <div className='w-full h-40 bg-emerald-300'>
+      <h2>Card</h2>
     </div>
   )
 }

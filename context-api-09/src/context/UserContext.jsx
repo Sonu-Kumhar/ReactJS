@@ -1,8 +1,9 @@
 import React, { createContext } from 'react'
 
-export const UserContextData = createContext("Kim ji-won");
+export const UserContextData = createContext();
 
 const UserContext = (props) => {
+    
     console.log(props.children)
     return (
         <div>

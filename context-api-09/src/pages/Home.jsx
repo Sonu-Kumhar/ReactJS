@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
@@ -32,8 +30,8 @@ const Home = () => {
             </div>
 
             <button onClick={() => {
-                navigate('/allproducts')
-            }} className='bg-[#333333] text-white px-8 py-4 rounded-xl  text-2xl mt-10 font-bold active:scale-95 cursor-pointer'>Explore Your Style</button>
+                navigate('/products')
+            }} className='bg-[#333333] text-white px-8 py-4 rounded-xl  text-2xl mt-10 font-bold active:scale-95 cursor-pointer'>Choose Your Style</button>
         </div>
 
     )

@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+button{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@keyframes animate-marque-style {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: animate-marque-style 20s linear infinite;
+}

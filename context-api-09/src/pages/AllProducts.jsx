@@ -1,27 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState, useEffect } from 'react'
-import getAllProducts from "../api/ProductApi"
+import { AllProductDataContext } from '../context/ProductContext'
 
 const AllProducts = () => {
-
-   const [allProducts, setAllProducts] = useState([])
-
-    let gettingProductsData = async () =>{
-      let data = await getAllProducts();
-        setAllProducts([...data])
-        // console.log(data)
-    }
-
-    useEffect(()=>{
-        gettingProductsData();
-    },[])
+    let productsData = useContext(AllProductDataContext)
+    // console.log("productsData: ", productsData)
 
     return (
         <div className='w-full h-full p-8 bg-[#dcdcdc]'>
 
             <div className=' flex flex-wrap gap-12 text-black '>
                 {
-                    allProducts.map((elem, index) => {
+                    productsData.map((elem, index) => {
                         return <div key={elem.id} className='h-90 w-60 flex justify-center items-center px-2 py-2 bg-[#e7e7e7] rounded-2xl'>
                             <div className='h-85 w-55 p-4 border-2 border-[#a9a9a9] rounded-2xl'>
                                 <img className='h-50 w-full' src={elem.image} alt="" />

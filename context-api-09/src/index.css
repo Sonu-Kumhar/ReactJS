@@ -16,7 +16,19 @@ button{
     transform: translateX(-50%);
   }
 }
+@keyframes animate-marque-style2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
 .animate-marquee {
   animation: animate-marque-style 20s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: animate-marque-style2 20s linear infinite alternate;
 }

@@ -18,7 +18,12 @@ const Home = () => {
 
 
     return (
-        <div className='w-full min-h-screen flex flex-col justify-center items-center overflow-y-hidden'>
+        <div className='w-full min-h-screen flex flex-col items-center overflow-y-hidden'>
+            <div className='w-full flex justify-between px-30'>
+                <img className='h-40' src="https://img.pikbest.com/png-images/20241110/classic-fashion-logo-design-for-apparel_11077248.png!sw800" alt="" />
+                <img className='h-40' src="https://png.pngtree.com/png-clipart/20250416/original/pngtree-fashion-business-logo-png-image_20703587.png" alt="" />
+                <img className='h-40' src="https://img.freepik.com/premium-vector/fashion-vector-logo_539216-7306.jpg?semt=ais_hybrid&w=740&q=80" alt="" />
+            </div>
             <div className='w-full overflow-x-auto overflow-y-hidden px-4 scroll-h scroll-smooth whitespace-nowrap  h-1/2 flex gap-6 '>
                 <div className='flex gap-6 whitespace-nowrap animate-marquee'>
                     {

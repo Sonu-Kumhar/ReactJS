@@ -1,16 +1,85 @@
-# React + Vite
+# React Product Store 🛍️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based product store application that fetches product data from an external API, manages it globally using Context API, and provides smooth navigation between product listings and detailed views.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Preview
 
-## React Compiler
+<p align="center">
+  <img src="public/preview1.png" width="1000" />
+</p>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<p align="center">
+  <img src="public/preview2.png" width="1000" />
+</p>
 
-## Expanding the ESLint configuration
+<p align="center">
+  <img src="public/preview3.png" width="1000" />
+</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+- Product data fetched from FakeStore API
+- Global state management using Context API
+- Product listing page
+- Individual product detail page with dynamic routing
+- Loading state handling
+- Smooth navigation using React Router
+- Clean and modular component structure
+
+---
+
+## 🧠 Concepts Covered
+- React Hooks (`useState`, `useEffect`, `useContext`)
+- Context API for global state
+- React Router (`Routes`, `Route`, `useParams`, `useNavigate`)
+- API layer separation
+- Conditional rendering
+- React render & re-render behavior
+
+---
+
+## 📁 Project Structure
+src/
+├── api/
+│ └── ProductApi.js
+├── context/
+│ └── ProductContext.jsx
+├── pages/
+│ ├── Home.jsx
+│ ├── AllProducts.jsx
+│ └── SelectedProduct.jsx
+├── App.jsx
+└── main.jsx
+
+public/
+├── preview1.png
+├── preview2.png
+└── preview3.png
+
+yaml
+Copy code
+
+---
+
+## 🔄 Application Flow
+1. Products are fetched once inside `ProductContext`
+2. Data is stored globally using Context API
+3. Pages consume product data via `useContext`
+4. Product details are rendered using route parameters
+
+---
+
+## 🌐 API Used
+- https://fakestoreapi.com/products
+
+---
+
+## ▶️ Run Locally
+```bash
+npm install
+npm run dev
+📝 Note
+This project is built to understand and practice real-world React concepts such as rendering behavior, global state management, and routing.

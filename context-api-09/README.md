@@ -38,7 +38,6 @@ A React-based product store application that fetches product data from an extern
 - API layer separation
 - Conditional rendering
 - React render & re-render behavior
-
 ---
 
 ## 📁 Project Structure
@@ -58,9 +57,6 @@ public/
 ├── preview1.png
 ├── preview2.png
 └── preview3.png
-
-yaml
-Copy code
 
 ---
 

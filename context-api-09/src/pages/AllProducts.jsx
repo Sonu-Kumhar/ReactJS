@@ -8,7 +8,7 @@ const AllProducts = () => {
     // console.log("productsData: ", productsData)
 
     return (
-        <div className='w-full h-full p-8 bg-[#dcdcdc]'>
+        <div className='w-full h-full p-8 bg-[#dadada]'>
 
             <div className=' flex flex-wrap gap-12 text-black '>
                 {
